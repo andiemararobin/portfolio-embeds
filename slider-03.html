@@ -24,15 +24,15 @@
     cursor: col-resize;
     user-select: none;
     border-radius: 8px;
-    border: 1px solid #ddd9d0;
+    border: 1px solid #5c7e8f;
   }
   .side {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
   }
-  .before { background: #f7f4ee; }
-  .after  { background: #e1f5ee; }
+  .before { background: #eef1f2; }
+  .after  { background: #dde6ea; }
   .clip {
     position: absolute;
     top: 0; left: 0;
@@ -45,7 +45,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background: #1c1b18;
+    background: #3d5159;
     cursor: col-resize;
     display: flex;
     align-items: center;
@@ -55,8 +55,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #1c1b18;
-    color: #f7f4ee;
+    background: #3d5159;
+    color: #eef1f2;
     border-radius: 20px;
     padding: 6px 12px;
     font-size: 11px;
@@ -69,7 +69,7 @@
     font-size: 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #8a8780;
+    color: #5c7e8f;
     pointer-events: none;
   }
   .label-before { left: 16px; }
@@ -79,43 +79,41 @@
 <body>
 <div class="wrap" id="slider">
 
-  <!-- AFTER (bottom layer) -->
   <div class="side after">
     <svg width="100%" height="100%" viewBox="0 0 680 200" preserveAspectRatio="xMidYMid meet">
       <title>After: student surrounded by equity-informed support infrastructure</title>
       <defs>
         <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#3d5159" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
       </defs>
-      <circle cx="340" cy="100" r="30" fill="#1D9E75" opacity="0.9"/>
-      <text font-size="11" font-weight="500" fill="#E1F5EE" x="340" y="100" text-anchor="middle" dominant-baseline="central">student</text>
-      <rect x="40"  y="20"  width="155" height="30" rx="4" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-      <text font-size="10" fill="#085041" x="118" y="35" text-anchor="middle" dominant-baseline="central">accessible onboarding</text>
-      <rect x="485" y="20"  width="155" height="30" rx="4" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-      <text font-size="10" fill="#085041" x="563" y="35" text-anchor="middle" dominant-baseline="central">accommodation toolkit</text>
-      <rect x="40"  y="150" width="155" height="30" rx="4" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-      <text font-size="10" fill="#085041" x="118" y="165" text-anchor="middle" dominant-baseline="central">equity evaluation</text>
-      <rect x="485" y="150" width="155" height="30" rx="4" fill="#9FE1CB" stroke="#0F6E56" stroke-width="0.5"/>
-      <text font-size="10" fill="#085041" x="563" y="165" text-anchor="middle" dominant-baseline="central">inclusive job design</text>
-      <line x1="195" y1="35"  x2="314" y2="82"  stroke="#0F6E56" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="485" y1="35"  x2="368" y2="82"  stroke="#0F6E56" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="195" y1="165" x2="314" y2="120" stroke="#0F6E56" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="485" y1="165" x2="368" y2="120" stroke="#0F6E56" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <text font-size="10" fill="#0F6E56" x="340" y="192" text-anchor="middle">equity built into the system, not added on</text>
+      <circle cx="340" cy="100" r="30" fill="#5c7e8f" opacity="0.9"/>
+      <text font-size="11" font-weight="500" fill="#eef1f2" x="340" y="100" text-anchor="middle" dominant-baseline="central">student</text>
+      <rect x="40"  y="20"  width="155" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text font-size="10" fill="#3d5159" x="118" y="35" text-anchor="middle" dominant-baseline="central">accessible onboarding</text>
+      <rect x="485" y="20"  width="155" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text font-size="10" fill="#3d5159" x="563" y="35" text-anchor="middle" dominant-baseline="central">accommodation toolkit</text>
+      <rect x="40"  y="150" width="155" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text font-size="10" fill="#3d5159" x="118" y="165" text-anchor="middle" dominant-baseline="central">equity evaluation</text>
+      <rect x="485" y="150" width="155" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text font-size="10" fill="#3d5159" x="563" y="165" text-anchor="middle" dominant-baseline="central">inclusive job design</text>
+      <line x1="195" y1="35"  x2="314" y2="82"  stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
+      <line x1="485" y1="35"  x2="368" y2="82"  stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
+      <line x1="195" y1="165" x2="314" y2="120" stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
+      <line x1="485" y1="165" x2="368" y2="120" stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
+      <text font-size="10" fill="#3d5159" x="340" y="192" text-anchor="middle">equity built into the system, not added on</text>
     </svg>
   </div>
 
-  <!-- BEFORE (clipped top layer) -->
   <div class="clip" id="clip">
     <div class="side before">
       <svg width="100%" height="100%" viewBox="0 0 680 200" preserveAspectRatio="xMidYMid meet">
         <title>Before: student placed in a role with no support infrastructure</title>
-        <circle cx="340" cy="90" r="30" fill="#888780" opacity="0.25"/>
-        <text font-size="11" fill="#5F5E5A" x="340" y="90" text-anchor="middle" dominant-baseline="central">student</text>
-        <text font-size="10" fill="#888780" x="340" y="144" text-anchor="middle">placed in a role</text>
-        <text font-size="10" fill="#888780" x="340" y="160" text-anchor="middle">no onboarding · no accommodation · no evaluation</text>
-        <text font-size="10" fill="#B4B2A9" x="340" y="182" text-anchor="middle">access ≠ belonging</text>
+        <circle cx="340" cy="90" r="30" fill="#5c7e8f" opacity="0.2"/>
+        <text font-size="11" fill="#3d5159" x="340" y="90" text-anchor="middle" dominant-baseline="central">student</text>
+        <text font-size="10" fill="#5c7e8f" x="340" y="144" text-anchor="middle">placed in a role</text>
+        <text font-size="10" fill="#5c7e8f" x="340" y="160" text-anchor="middle">no onboarding · no accommodation · no evaluation</text>
+        <text font-size="10" fill="#5c7e8f" x="340" y="182" text-anchor="middle" opacity="0.6">access ≠ belonging</text>
       </svg>
     </div>
   </div>
@@ -133,22 +131,19 @@
   const clip   = document.getElementById('clip');
   const handle = document.getElementById('handle');
   let dragging = false;
-
   function setPos(clientX) {
     const rect = wrap.getBoundingClientRect();
     const pct  = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 2), 98);
-    clip.style.width   = pct + '%';
-    handle.style.left  = pct + '%';
+    clip.style.width  = pct + '%';
+    handle.style.left = pct + '%';
     clip.style.setProperty('--full-w', rect.width + 'px');
   }
-
   wrap.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); });
   wrap.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
   window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
   window.addEventListener('touchmove',  e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
   window.addEventListener('mouseup',  () => dragging = false);
   window.addEventListener('touchend', () => dragging = false);
-
   const r = wrap.getBoundingClientRect();
   clip.style.setProperty('--full-w', r.width + 'px');
 })();
