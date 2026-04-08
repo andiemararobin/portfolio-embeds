@@ -24,15 +24,15 @@
     cursor: col-resize;
     user-select: none;
     border-radius: 8px;
-    border: 1px solid #ddd9d0;
+    border: 1px solid #5c7e8f;
   }
   .side {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
   }
-  .before { background: #f7f4ee; }
-  .after  { background: #e1f5ee; }
+  .before { background: #eef1f2; }
+  .after  { background: #dde6ea; }
   .clip {
     position: absolute;
     top: 0; left: 0;
@@ -45,7 +45,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background: #1c1b18;
+    background: #3d5159;
     cursor: col-resize;
     display: flex;
     align-items: center;
@@ -55,8 +55,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #1c1b18;
-    color: #f7f4ee;
+    background: #3d5159;
+    color: #eef1f2;
     border-radius: 20px;
     padding: 6px 12px;
     font-size: 11px;
@@ -69,7 +69,7 @@
     font-size: 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #8a8780;
+    color: #5c7e8f;
     pointer-events: none;
   }
   .label-before { left: 16px; }
@@ -79,42 +79,40 @@
 <body>
 <div class="wrap" id="slider">
 
-  <!-- AFTER (bottom layer) -->
   <div class="side after">
     <svg width="100%" height="100%" viewBox="0 0 680 210" preserveAspectRatio="xMidYMid meet">
       <title>After: nine-level evaluation framework</title>
-      <rect x="60" y="14"  width="560" height="22" rx="3" fill="#1D9E75" opacity="0.95"/>
-      <text font-size="10" font-weight="500" fill="#E1F5EE" x="340" y="25" text-anchor="middle" dominant-baseline="central">societal impact</text>
-      <rect x="60" y="40"  width="560" height="22" rx="3" fill="#1D9E75" opacity="0.82"/>
-      <text font-size="10" fill="#E1F5EE" x="340" y="51" text-anchor="middle" dominant-baseline="central">organisational performance</text>
-      <rect x="60" y="66"  width="560" height="22" rx="3" fill="#1D9E75" opacity="0.69"/>
-      <text font-size="10" fill="#E1F5EE" x="340" y="77" text-anchor="middle" dominant-baseline="central">individual performance</text>
-      <rect x="60" y="92"  width="560" height="22" rx="3" fill="#1D9E75" opacity="0.56"/>
-      <text font-size="10" fill="#085041" x="340" y="103" text-anchor="middle" dominant-baseline="central">task competence</text>
-      <rect x="60" y="118" width="560" height="22" rx="3" fill="#5DCAA5" opacity="0.55"/>
-      <text font-size="10" fill="#085041" x="340" y="129" text-anchor="middle" dominant-baseline="central">decision-making competence</text>
-      <rect x="60" y="144" width="560" height="22" rx="3" fill="#9FE1CB" opacity="0.65"/>
-      <text font-size="10" fill="#085041" x="340" y="155" text-anchor="middle" dominant-baseline="central">knowledge acquisition</text>
-      <rect x="60" y="170" width="560" height="22" rx="3" fill="#9FE1CB" opacity="0.45"/>
-      <text font-size="10" fill="#085041" x="340" y="181" text-anchor="middle" dominant-baseline="central">learner perception · attendance · access</text>
-      <text font-size="10" fill="#0F6E56" x="340" y="204" text-anchor="middle">we measure what we value</text>
+      <rect x="60" y="14"  width="560" height="22" rx="3" fill="#3d5159" opacity="0.95"/>
+      <text font-size="10" font-weight="500" fill="#eef1f2" x="340" y="25" text-anchor="middle" dominant-baseline="central">societal impact</text>
+      <rect x="60" y="40"  width="560" height="22" rx="3" fill="#3d5159" opacity="0.8"/>
+      <text font-size="10" fill="#eef1f2" x="340" y="51" text-anchor="middle" dominant-baseline="central">organisational performance</text>
+      <rect x="60" y="66"  width="560" height="22" rx="3" fill="#5c7e8f" opacity="0.9"/>
+      <text font-size="10" fill="#eef1f2" x="340" y="77" text-anchor="middle" dominant-baseline="central">individual performance</text>
+      <rect x="60" y="92"  width="560" height="22" rx="3" fill="#5c7e8f" opacity="0.75"/>
+      <text font-size="10" fill="#eef1f2" x="340" y="103" text-anchor="middle" dominant-baseline="central">task competence</text>
+      <rect x="60" y="118" width="560" height="22" rx="3" fill="#5c7e8f" opacity="0.55"/>
+      <text font-size="10" fill="#3d5159" x="340" y="129" text-anchor="middle" dominant-baseline="central">decision-making competence</text>
+      <rect x="60" y="144" width="560" height="22" rx="3" fill="#5c7e8f" opacity="0.35"/>
+      <text font-size="10" fill="#3d5159" x="340" y="155" text-anchor="middle" dominant-baseline="central">knowledge acquisition</text>
+      <rect x="60" y="170" width="560" height="22" rx="3" fill="#5c7e8f" opacity="0.18"/>
+      <text font-size="10" fill="#3d5159" x="340" y="181" text-anchor="middle" dominant-baseline="central">learner perception · attendance · access</text>
+      <text font-size="10" fill="#3d5159" x="340" y="204" text-anchor="middle">we measure what we value</text>
     </svg>
   </div>
 
-  <!-- BEFORE (clipped top layer) -->
   <div class="clip" id="clip">
     <div class="side before">
       <svg width="100%" height="100%" viewBox="0 0 680 210" preserveAspectRatio="xMidYMid meet">
         <title>Before: learning happens unmeasured</title>
-        <rect x="60" y="20"  width="560" height="28" rx="4" fill="#888780" opacity="0.12"/>
-        <rect x="60" y="62"  width="560" height="28" rx="4" fill="#888780" opacity="0.12"/>
-        <rect x="60" y="104" width="560" height="28" rx="4" fill="#888780" opacity="0.12"/>
-        <rect x="60" y="146" width="560" height="28" rx="4" fill="#888780" opacity="0.12"/>
-        <text font-size="11" fill="#888780" x="340" y="34"  text-anchor="middle" dominant-baseline="central">training delivered</text>
-        <text font-size="11" fill="#888780" x="340" y="76"  text-anchor="middle" dominant-baseline="central">sessions completed</text>
-        <text font-size="11" fill="#888780" x="340" y="118" text-anchor="middle" dominant-baseline="central">attendance recorded</text>
-        <text font-size="11" fill="#888780" x="340" y="160" text-anchor="middle" dominant-baseline="central">impact unknown</text>
-        <text font-size="10" fill="#B4B2A9" x="340" y="192" text-anchor="middle">we measure what we can count</text>
+        <rect x="60" y="20"  width="560" height="28" rx="4" fill="#5c7e8f" opacity="0.12"/>
+        <rect x="60" y="62"  width="560" height="28" rx="4" fill="#5c7e8f" opacity="0.12"/>
+        <rect x="60" y="104" width="560" height="28" rx="4" fill="#5c7e8f" opacity="0.12"/>
+        <rect x="60" y="146" width="560" height="28" rx="4" fill="#5c7e8f" opacity="0.12"/>
+        <text font-size="11" fill="#5c7e8f" x="340" y="34"  text-anchor="middle" dominant-baseline="central">training delivered</text>
+        <text font-size="11" fill="#5c7e8f" x="340" y="76"  text-anchor="middle" dominant-baseline="central">sessions completed</text>
+        <text font-size="11" fill="#5c7e8f" x="340" y="118" text-anchor="middle" dominant-baseline="central">attendance recorded</text>
+        <text font-size="11" fill="#5c7e8f" x="340" y="160" text-anchor="middle" dominant-baseline="central">impact unknown</text>
+        <text font-size="10" fill="#5c7e8f" x="340" y="192" text-anchor="middle" opacity="0.6">we measure what we can count</text>
       </svg>
     </div>
   </div>
@@ -132,22 +130,19 @@
   const clip   = document.getElementById('clip');
   const handle = document.getElementById('handle');
   let dragging = false;
-
   function setPos(clientX) {
     const rect = wrap.getBoundingClientRect();
     const pct  = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 2), 98);
-    clip.style.width   = pct + '%';
-    handle.style.left  = pct + '%';
+    clip.style.width  = pct + '%';
+    handle.style.left = pct + '%';
     clip.style.setProperty('--full-w', rect.width + 'px');
   }
-
   wrap.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); });
   wrap.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
   window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
   window.addEventListener('touchmove',  e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
   window.addEventListener('mouseup',  () => dragging = false);
   window.addEventListener('touchend', () => dragging = false);
-
   const r = wrap.getBoundingClientRect();
   clip.style.setProperty('--full-w', r.width + 'px');
 })();
