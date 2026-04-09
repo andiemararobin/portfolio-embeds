@@ -3,157 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study 01 — Before & After</title>
+<title>Case Study AR01 — Before & After</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0;
-  }
-  .wrap {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    height: 220px;
-    overflow: hidden;
-    cursor: col-resize;
-    user-select: none;
-    border-radius: 8px;
-    border: 1px solid #5c7e8f;
-  }
-  .side {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-  }
-  .before { background: #eef1f2; }
-  .after  { background: #dde6ea; }
-  .clip {
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-  .clip .before { width: var(--full-w, 800px); }
-  .handle {
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: #3d5159;
-    cursor: col-resize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .pill {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #3d5159;
-    color: #eef1f2;
-    border-radius: 20px;
-    padding: 6px 12px;
-    font-size: 11px;
-    white-space: nowrap;
-    pointer-events: none;
-  }
-  .label {
-    position: absolute;
-    bottom: 12px;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #5c7e8f;
-    pointer-events: none;
-  }
-  .label-before { left: 16px; }
-  .label-after  { right: 16px; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #3d5159; max-width: 680px; margin: 0 auto; padding: 0.75rem; }
+  .labels { display: flex; justify-content: space-between; font-size: 11px; color: #3d5159; letter-spacing: 0.06em; padding-bottom: 4px; }
+  .wrap { position: relative; width: 100%; aspect-ratio: 640 / 400; overflow: hidden; cursor: col-resize; user-select: none; }
+  .panel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  .after-panel { clip-path: inset(0 50% 0 0); }
+  .divider-line { position: absolute; top: 0; left: 50%; width: 1px; height: 100%; background: #3d5159; pointer-events: none; }
+  .handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 1px solid #3d5159; display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 10px; color: #3d5159; letter-spacing: -2px; }
+  .hint { text-align: center; font-size: 11px; color: #3d5159; padding-top: 4px; }
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 </head>
 <body>
-<div class="wrap" id="slider">
 
-  <div class="side after">
-    <svg width="100%" height="100%" viewBox="0 0 680 200" preserveAspectRatio="xMidYMid meet">
-      <title>After: coherent learning system</title>
-      <defs>
-        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#3d5159" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-      <rect x="40" y="24" width="130" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text font-size="11" fill="#3d5159" x="105" y="39" text-anchor="middle" dominant-baseline="central">compliance</text>
-      <rect x="40" y="66" width="130" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text font-size="11" fill="#3d5159" x="105" y="81" text-anchor="middle" dominant-baseline="central">onboarding</text>
-      <rect x="40" y="108" width="130" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text font-size="11" fill="#3d5159" x="105" y="123" text-anchor="middle" dominant-baseline="central">policy updates</text>
-      <rect x="40" y="150" width="130" height="30" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text font-size="11" fill="#3d5159" x="105" y="165" text-anchor="middle" dominant-baseline="central">digital tools</text>
-      <line x1="170" y1="39"  x2="390" y2="95"  stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="170" y1="81"  x2="390" y2="98"  stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="170" y1="123" x2="390" y2="101" stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <line x1="170" y1="165" x2="390" y2="104" stroke="#5c7e8f" stroke-width="0.5" fill="none" marker-end="url(#arr)"/>
-      <rect x="390" y="60" width="240" height="80" rx="8" fill="#5c7e8f" stroke="#3d5159" stroke-width="0.5"/>
-      <text font-size="13" font-weight="500" fill="#eef1f2" x="510" y="92"  text-anchor="middle" dominant-baseline="central">a coherent</text>
-      <text font-size="13" font-weight="500" fill="#eef1f2" x="510" y="112" text-anchor="middle" dominant-baseline="central">learning system</text>
-      <text font-size="10" fill="#3d5159" x="510" y="182" text-anchor="middle">fragmented interventions → unified system</text>
-    </svg>
-  </div>
+<div class="labels"><span>Before</span><span>After</span></div>
 
-  <div class="clip" id="clip">
-    <div class="side before">
-      <svg width="100%" height="100%" viewBox="0 0 680 200" preserveAspectRatio="xMidYMid meet">
-        <title>Before: isolated learning interventions</title>
-        <rect x="40"  y="30"  width="140" height="32" rx="4" fill="#5c7e8f" opacity="0.2"/>
-        <rect x="220" y="80"  width="140" height="32" rx="4" fill="#5c7e8f" opacity="0.2"/>
-        <rect x="400" y="20"  width="140" height="32" rx="4" fill="#5c7e8f" opacity="0.2"/>
-        <rect x="100" y="140" width="140" height="32" rx="4" fill="#5c7e8f" opacity="0.2"/>
-        <rect x="460" y="120" width="140" height="32" rx="4" fill="#5c7e8f" opacity="0.2"/>
-        <text font-size="11" fill="#3d5159" x="110" y="46"  text-anchor="middle" dominant-baseline="central">compliance</text>
-        <text font-size="11" fill="#3d5159" x="290" y="96"  text-anchor="middle" dominant-baseline="central">onboarding</text>
-        <text font-size="11" fill="#3d5159" x="470" y="36"  text-anchor="middle" dominant-baseline="central">policy updates</text>
-        <text font-size="11" fill="#3d5159" x="170" y="156" text-anchor="middle" dominant-baseline="central">digital tools</text>
-        <text font-size="11" fill="#3d5159" x="530" y="136" text-anchor="middle" dominant-baseline="central">facilitation</text>
-        <text font-size="10" fill="#5c7e8f" x="340" y="192" text-anchor="middle">no shared direction · no connective tissue</text>
-      </svg>
-    </div>
-  </div>
+<div class="wrap" id="wrap">
 
-  <div class="handle" id="handle" style="left:50%">
-    <div class="pill">← drag →</div>
-  </div>
-  <span class="label label-before">Before</span>
-  <span class="label label-after">After</span>
+  <svg class="panel" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
+    <title>Before: litigation-based model — employee and client separated by process, fault, and legal outcome</title>
+    <desc>An employee on the left and a client on the right are separated by a central barrier representing the litigation-based model, with labels showing process, fault determination, and legal outcome.</desc>
+    <rect width="640" height="400" fill="#eef1f2"/>
+    <text x="320" y="26" text-anchor="middle" font-size="11" fill="#3d5159" letter-spacing="1">litigation-based model</text>
+    <rect x="40" y="150" width="130" height="44" rx="4" fill="#fff" stroke="#3d5159" stroke-width="0.5"/>
+    <text x="105" y="172" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">employee</text>
+    <rect x="470" y="150" width="130" height="44" rx="4" fill="#fff" stroke="#3d5159" stroke-width="0.5" opacity="0.5"/>
+    <text x="535" y="172" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159" opacity="0.5">client</text>
+    <rect x="210" y="80" width="220" height="200" rx="4" fill="#fff" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="3 3"/>
+    <text x="320" y="145" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">process</text>
+    <line x1="230" y1="162" x2="410" y2="162" stroke="#3d5159" stroke-width="0.5" opacity="0.3"/>
+    <text x="320" y="185" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">fault determination</text>
+    <line x1="230" y1="202" x2="410" y2="202" stroke="#3d5159" stroke-width="0.5" opacity="0.3"/>
+    <text x="320" y="225" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">legal outcome</text>
+    <line x1="170" y1="172" x2="208" y2="172" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="2 3"/>
+    <line x1="432" y1="172" x2="468" y2="172" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="2 3"/>
+    <text x="320" y="340" text-anchor="middle" font-size="11" fill="#3d5159">employee and client on opposite sides of the same system</text>
+  </svg>
+
+  <svg class="panel after-panel" id="after" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
+    <title>After: care-based model — employee and client connected through recovery, access, and support</title>
+    <desc>An employee on the left and a client on the right are now connected through a central bridge representing the care-based model, with labels showing recovery, access to resources, and support.</desc>
+    <defs>
+      <marker id="ac" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="#5c7e8f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+    <rect width="640" height="400" fill="#fff"/>
+    <text x="320" y="26" text-anchor="middle" font-size="11" fill="#3d5159" letter-spacing="1">care-based model</text>
+    <rect x="40" y="150" width="130" height="44" rx="4" fill="#eef1f2" stroke="#3d5159" stroke-width="0.5"/>
+    <text x="105" y="172" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">employee</text>
+    <rect x="470" y="150" width="130" height="44" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+    <text x="535" y="172" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">client</text>
+    <rect x="210" y="80" width="220" height="200" rx="4" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+    <text x="320" y="145" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">recovery</text>
+    <line x1="230" y1="162" x2="410" y2="162" stroke="#5c7e8f" stroke-width="0.5" opacity="0.4"/>
+    <text x="320" y="185" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">access to resources</text>
+    <line x1="230" y1="202" x2="410" y2="202" stroke="#5c7e8f" stroke-width="0.5" opacity="0.4"/>
+    <text x="320" y="225" text-anchor="middle" dominant-baseline="central" font-size="13" fill="#3d5159">support</text>
+    <line x1="170" y1="172" x2="208" y2="172" stroke="#5c7e8f" stroke-width="0.5" marker-end="url(#ac)"/>
+    <line x1="432" y1="172" x2="468" y2="172" stroke="#5c7e8f" stroke-width="0.5" marker-end="url(#ac)"/>
+    <text x="320" y="340" text-anchor="middle" font-size="11" fill="#3d5159">employee and client oriented toward the same goal</text>
+  </svg>
+
+  <div class="divider-line" id="divider"></div>
+  <div class="handle" id="handle">&#8592;&#8594;</div>
 </div>
 
+<p class="hint">drag to compare</p>
+
 <script>
-(function(){
-  const wrap   = document.getElementById('slider');
-  const clip   = document.getElementById('clip');
-  const handle = document.getElementById('handle');
-  let dragging = false;
-  function setPos(clientX) {
-    const rect = wrap.getBoundingClientRect();
-    const pct  = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 2), 98);
-    clip.style.width  = pct + '%';
-    handle.style.left = pct + '%';
-    clip.style.setProperty('--full-w', rect.width + 'px');
-  }
-  wrap.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); });
-  wrap.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
-  window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
-  window.addEventListener('touchmove',  e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
-  window.addEventListener('mouseup',  () => dragging = false);
-  window.addEventListener('touchend', () => dragging = false);
-  const r = wrap.getBoundingClientRect();
-  clip.style.setProperty('--full-w', r.width + 'px');
-})();
+  const wrap=document.getElementById('wrap'),after=document.getElementById('after'),divider=document.getElementById('divider'),handle=document.getElementById('handle');
+  let dragging=false;
+  function setPos(x){const r=wrap.getBoundingClientRect(),p=Math.max(4,Math.min(96,((x-r.left)/r.width)*100));after.style.clipPath='inset(0 '+(100-p)+'% 0 0)';divider.style.left=p+'%';handle.style.left=p+'%';}
+  wrap.addEventListener('mousedown',e=>{dragging=true;setPos(e.clientX);});
+  window.addEventListener('mousemove',e=>{if(dragging)setPos(e.clientX);});
+  window.addEventListener('mouseup',()=>{dragging=false;});
+  wrap.addEventListener('touchstart',e=>{dragging=true;setPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchmove',e=>{if(dragging)setPos(e.touches[0].clientX);},{passive:true});
+  window.addEventListener('touchend',()=>{dragging=false;});
 </script>
 </body>
 </html>
