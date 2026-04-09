@@ -1,83 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study AR03 — Before & After</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #3d5159; max-width: 680px; margin: 0 auto; padding: 0.75rem; }
-  .labels { display: flex; justify-content: space-between; font-size: 11px; color: #3d5159; letter-spacing: 0.06em; padding-bottom: 4px; }
-  .wrap { position: relative; width: 100%; aspect-ratio: 640 / 400; overflow: hidden; cursor: col-resize; user-select: none; }
-  .panel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-  .after-panel { clip-path: inset(0 50% 0 0); }
-  .divider-line { position: absolute; top: 0; left: 50%; width: 1px; height: 100%; background: #3d5159; pointer-events: none; }
-  .handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 1px solid #3d5159; display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 10px; color: #3d5159; letter-spacing: -2px; }
-  .hint { text-align: center; font-size: 11px; color: #3d5159; padding-top: 4px; }
-  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilitating Equitable Experiential Learning at Scale — Andrea Robin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #3d5159;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0.75rem;
+    }
+    .col-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #3d5159;
+      letter-spacing: 0.06em;
+      padding-bottom: 4px;
+    }
+    .wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 680 / 700;
+      overflow: hidden;
+      cursor: col-resize;
+      user-select: none;
+    }
+    .panel {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+    .after-panel { clip-path: inset(0 50% 0 0); }
+    .divider-line {
+      position: absolute;
+      top: 0; left: 50%;
+      width: 1px; height: 100%;
+      background: #3d5159;
+      pointer-events: none;
+    }
+    .handle {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #3d5159;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      font-size: 10px;
+      color: #3d5159;
+      letter-spacing: -2px;
+    }
+    .hint {
+      text-align: center;
+      font-size: 11px;
+      color: #3d5159;
+      padding-top: 5px;
+      opacity: 0.6;
+    }
+    svg text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      fill: #3d5159;
+    }
+  </style>
 </head>
 <body>
 
-<div class="labels"><span>Before</span><span>After</span></div>
+  <div class="col-labels"><span>Before</span><span>After</span></div>
 
-<div class="wrap" id="wrap">
+  <div class="wrap" id="wrap">
 
-  <svg class="panel" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-    <title>Before: three isolated rings — student staff, learning institution, campus employers — with no shared infrastructure connecting them</title>
-    <desc>Three concentric-style rings sit disconnected from each other. The inner ring shows student staff without support systems. The middle ring shows a learning institution without shared processes. The outer ring shows campus employers with inconsistent onboarding. No connections run between them.</desc>
-    <rect width="640" height="400" fill="#eef1f2"/>
-    <text x="320" y="26" text-anchor="middle" font-size="11" fill="#3d5159" letter-spacing="1">no shared infrastructure</text>
-    <circle cx="320" cy="205" r="170" fill="none" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
-    <text x="320" y="48" text-anchor="middle" font-size="11" fill="#3d5159" opacity="0.4">900+ campus employers</text>
-    <text x="320" y="62" text-anchor="middle" font-size="11" fill="#3d5159" opacity="0.4">inconsistent onboarding</text>
-    <circle cx="320" cy="205" r="110" fill="none" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.55"/>
-    <text x="320" y="104" text-anchor="middle" font-size="11" fill="#3d5159" opacity="0.55">public-facing learning institution</text>
-    <text x="320" y="118" text-anchor="middle" font-size="11" fill="#3d5159" opacity="0.55">no shared processes</text>
-    <circle cx="320" cy="205" r="54" fill="#fff" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="3 3"/>
-    <text x="320" y="199" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3d5159">15+ student</text>
-    <text x="320" y="215" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#3d5159">staff</text>
-    <text x="320" y="362" text-anchor="middle" font-size="11" fill="#3d5159">equity aspirational · access inconsistent · students unsupported</text>
-  </svg>
+    <!-- BEFORE panel -->
+    <svg class="panel" viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Before: three outcome areas — people, institution, systemic reach — disconnected and unsupported</title>
+      <desc>Three outcome rows sit disconnected and unsupported. People doing the work have no shared processes. The institution has no shared equity infrastructure. Systemic reach across campus employers is inconsistent, with no equity standards.</desc>
 
-  <svg class="panel after-panel" id="after" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-    <title>After: three connected rings — student staff supported by wellness and public service processes, learning institution with equity infrastructure, campus-wide programme with accessible onboarding and grant oversight</title>
-    <desc>Three concentric rings now filled and connected. The inner ring shows student staff supported by wellness liaison and public service processes. The middle ring shows a learning institution with shared equity processes. The outer ring shows 900+ campus employers connected through accessible onboarding, equity evaluation, and $6M+ in grant funding oversight.</desc>
-    <rect width="640" height="400" fill="#fff"/>
-    <text x="320" y="26" text-anchor="middle" font-size="11" fill="#3d5159" letter-spacing="1">equity built into the architecture</text>
-    <circle cx="320" cy="205" r="170" fill="#eef1f2" stroke="#3d5159" stroke-width="0.5"/>
-    <text x="320" y="48" text-anchor="middle" font-size="11" fill="#3d5159">900+ employers · 3,000+ students</text>
-    <text x="320" y="62" text-anchor="middle" font-size="11" fill="#3d5159">accessible onboarding · equity evaluation</text>
-    <text x="490" y="205" text-anchor="middle" font-size="11" fill="#3d5159">$6M+</text>
-    <text x="490" y="219" text-anchor="middle" font-size="11" fill="#3d5159">grant oversight</text>
-    <circle cx="320" cy="205" r="110" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-    <text x="320" y="104" text-anchor="middle" font-size="11" fill="#3d5159">public-facing learning institution</text>
-    <text x="320" y="118" text-anchor="middle" font-size="11" fill="#3d5159">social safety net awareness</text>
-    <text x="222" y="205" text-anchor="middle" font-size="11" fill="#3d5159">positive</text>
-    <text x="222" y="219" text-anchor="middle" font-size="11" fill="#3d5159">space pilot</text>
-    <circle cx="320" cy="205" r="54" fill="#fff" stroke="#5c7e8f" stroke-width="0.5"/>
-    <text x="320" y="192" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3d5159">15+ student</text>
-    <text x="320" y="206" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3d5159">staff</text>
-    <text x="320" y="220" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3d5159">wellness liaison</text>
-    <text x="320" y="362" text-anchor="middle" font-size="11" fill="#3d5159">equity structural · access consistent · students supported</text>
-  </svg>
+      <rect width="680" height="700" fill="#eef1f2"/>
 
-  <div class="divider-line" id="divider"></div>
-  <div class="handle" id="handle">&#8592;&#8594;</div>
-</div>
+      <!-- Title -->
+      <text x="340" y="30" text-anchor="middle" font-size="13" font-weight="500">Facilitating equitable experiential learning at scale</text>
+      <text x="340" y="48" text-anchor="middle" font-size="11" opacity="0.6">Large research-intensive university · Two years · Two progressive roles</text>
 
-<p class="hint">drag to compare</p>
+      <text x="340" y="74" text-anchor="middle" font-size="11" letter-spacing="1" opacity="0.5">NO SHARED INFRASTRUCTURE</text>
 
-<script>
-  const wrap=document.getElementById('wrap'),after=document.getElementById('after'),divider=document.getElementById('divider'),handle=document.getElementById('handle');
-  let dragging=false;
-  function setPos(x){const r=wrap.getBoundingClientRect(),p=Math.max(4,Math.min(96,((x-r.left)/r.width)*100));after.style.clipPath='inset(0 '+(100-p)+'% 0 0)';divider.style.left=p+'%';handle.style.left=p+'%';}
-  wrap.addEventListener('mousedown',e=>{dragging=true;setPos(e.clientX);});
-  window.addEventListener('mousemove',e=>{if(dragging)setPos(e.clientX);});
-  window.addEventListener('mouseup',()=>{dragging=false;});
-  wrap.addEventListener('touchstart',e=>{dragging=true;setPos(e.touches[0].clientX);},{passive:true});
-  window.addEventListener('touchmove',e=>{if(dragging)setPos(e.touches[0].clientX);},{passive:true});
-  window.addEventListener('touchend',()=>{dragging=false;});
-</script>
+      <!-- Outcome 1: people -->
+      <text x="340" y="100" text-anchor="middle" font-size="11" opacity="0.4">people doing the work</text>
+      <line x1="44" y1="106" x2="636" y2="106" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="112" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="133" text-anchor="middle" font-size="12" opacity="0.45">15+ student staff in university-wide fieldwork</text>
+      <text x="340" y="150" text-anchor="middle" font-size="11" opacity="0.45">no shared processes · isolated front-line roles · no wellness support</text>
+
+      <!-- Outcome 2: institution -->
+      <text x="340" y="186" text-anchor="middle" font-size="11" opacity="0.4">the institution</text>
+      <line x1="44" y1="192" x2="636" y2="192" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="198" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="219" text-anchor="middle" font-size="12" opacity="0.45">Public-facing learning institution</text>
+      <text x="340" y="236" text-anchor="middle" font-size="11" opacity="0.45">no shared equity infrastructure · complex needs unaddressed</text>
+
+      <!-- Outcome 3: systemic reach -->
+      <text x="340" y="272" text-anchor="middle" font-size="11" opacity="0.4">systemic reach</text>
+      <line x1="44" y1="278" x2="636" y2="278" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="284" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="305" text-anchor="middle" font-size="12" opacity="0.45">900+ campus employers · 3,000+ students</text>
+      <text x="340" y="322" text-anchor="middle" font-size="11" opacity="0.45">inconsistent onboarding · no equity standards · placement ≠ support</text>
+
+      <text x="340" y="354" text-anchor="middle" font-size="11" opacity="0.4">equity aspirational · access inconsistent · students unsupported</text>
+
+      <line x1="40" y1="370" x2="640" y2="370" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+
+      <!-- Shift section -->
+      <text x="340" y="394" text-anchor="middle" font-size="13" font-weight="500">What the shift looked like</text>
+
+      <rect x="44" y="408" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="425" text-anchor="middle" font-size="12" opacity="0.45">Good intentions</text>
+      <text x="340" y="441" text-anchor="middle" font-size="11" opacity="0.45">Individual supervisor goodwill · variable practice across departments</text>
+
+      <rect x="44" y="462" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="479" text-anchor="middle" font-size="12" opacity="0.45">Technical eligibility</text>
+      <text x="340" y="495" text-anchor="middle" font-size="11" opacity="0.45">Students placed but not consistently supported or retained</text>
+
+      <rect x="44" y="516" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="533" text-anchor="middle" font-size="12" opacity="0.45">Isolated front-line roles</text>
+      <text x="340" y="549" text-anchor="middle" font-size="11" opacity="0.45">Staff unprepared for complexity they encountered daily</text>
+
+      <line x1="40" y1="574" x2="640" y2="574" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+
+      <!-- Core insight -->
+      <rect x="80" y="590" width="520" height="52" rx="6" fill="#fff" fill-opacity="0.5" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
+      <text x="340" y="611" text-anchor="middle" font-size="12" font-weight="500" opacity="0.45">Equity at scale requires systems, not just goodwill</text>
+      <text x="340" y="628" text-anchor="middle" font-size="11" opacity="0.45">People delivering equitable learning also need infrastructure and support</text>
+    </svg>
+
+    <!-- AFTER panel -->
+    <svg class="panel after-panel" id="after" viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>After: three outcome areas transformed — people supported, institution equity-aware, systemic reach at scale</title>
+      <desc>Three outcome rows now filled and connected. People doing the work have a wellness liaison and shared public service processes. The institution has social safety net awareness and an equity and inclusion pilot. Systemic reach covers 900+ employers and 3,000+ students with accessible onboarding, equity evaluation, and $6M+ in grant oversight.</desc>
+
+      <rect width="680" height="700" fill="#fff"/>
+
+      <!-- Title -->
+      <text x="340" y="30" text-anchor="middle" font-size="13" font-weight="500">Facilitating equitable experiential learning at scale</text>
+      <text x="340" y="48" text-anchor="middle" font-size="11" opacity="0.6">Large research-intensive university · Two years · Two progressive roles</text>
+
+      <text x="340" y="74" text-anchor="middle" font-size="11" letter-spacing="1" opacity="0.6">EQUITY BUILT INTO THE ARCHITECTURE</text>
+
+      <!-- Outcome 1: people -->
+      <text x="340" y="100" text-anchor="middle" font-size="11" opacity="0.5">people doing the work</text>
+      <line x1="44" y1="106" x2="636" y2="106" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="112" width="452" height="52" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="130" text-anchor="middle" font-size="12" font-weight="500">Wellness liaison partnership</text>
+      <text x="340" y="146" text-anchor="middle" font-size="11">Timely referral to health resources · shared public service processes</text>
+      <text x="340" y="159" text-anchor="middle" font-size="11">Staff equipped to respond to community complexity with care</text>
+
+      <!-- Outcome 2: institution -->
+      <text x="340" y="186" text-anchor="middle" font-size="11" opacity="0.5">the institution</text>
+      <line x1="44" y1="192" x2="636" y2="192" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="198" width="452" height="52" rx="6" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="216" text-anchor="middle" font-size="12" font-weight="500">Social safety net awareness · equity &amp; inclusion pilot</text>
+      <text x="340" y="232" text-anchor="middle" font-size="11">Administration and student leaders equipped for equity practice</text>
+      <text x="340" y="245" text-anchor="middle" font-size="11">Inclusion of sexual and gender diversity built into student leadership</text>
+
+      <!-- Outcome 3: systemic reach -->
+      <text x="340" y="272" text-anchor="middle" font-size="11" opacity="0.5">systemic reach</text>
+      <line x1="44" y1="278" x2="636" y2="278" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+      <rect x="114" y="284" width="452" height="52" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="302" text-anchor="middle" font-size="12" font-weight="500">Accessible onboarding · equity evaluation · $6M+ grant oversight</text>
+      <text x="340" y="318" text-anchor="middle" font-size="11">900+ employers · 3,000+ students · HPSM inclusion assessed</text>
+      <text x="340" y="331" text-anchor="middle" font-size="11">Revised job postings reducing structural barriers at point of design</text>
+
+      <text x="340" y="354" text-anchor="middle" font-size="11" opacity="0.6">equity structural · access consistent · students supported</text>
+
+      <line x1="40" y1="370" x2="640" y2="370" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+
+      <!-- Shift section -->
+      <text x="340" y="394" text-anchor="middle" font-size="13" font-weight="500">What the shift looked like</text>
+
+      <rect x="44" y="408" width="592" height="44" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="425" text-anchor="middle" font-size="12" font-weight="500">Shared infrastructure</text>
+      <text x="340" y="441" text-anchor="middle" font-size="11">Equity built into onboarding, process design, and evaluation</text>
+
+      <rect x="44" y="462" width="592" height="44" rx="6" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="479" text-anchor="middle" font-size="12" font-weight="500">Meaningful inclusion</text>
+      <text x="340" y="495" text-anchor="middle" font-size="11">HPSM students placed, retained, and systematically assessed</text>
+
+      <rect x="44" y="516" width="592" height="44" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
+      <text x="340" y="533" text-anchor="middle" font-size="12" font-weight="500">Supported practitioners</text>
+      <text x="340" y="549" text-anchor="middle" font-size="11">Wellness, awareness, and appropriate boundaries built in</text>
+
+      <line x1="40" y1="574" x2="640" y2="574" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
+
+      <!-- Core insight -->
+      <rect x="80" y="590" width="520" height="52" rx="6" fill="#eef1f2" stroke="#3d5159" stroke-width="0.5"/>
+      <text x="340" y="611" text-anchor="middle" font-size="12" font-weight="500">Equity at scale requires systems, not just goodwill</text>
+      <text x="340" y="628" text-anchor="middle" font-size="11">People delivering equitable learning also need infrastructure and support</text>
+    </svg>
+
+    <div class="divider-line" id="divider"></div>
+    <div class="handle" id="handle">&#8592;&#8594;</div>
+  </div>
+
+  <p class="hint">drag to compare</p>
+
+  <script>
+    const wrap = document.getElementById('wrap');
+    const after = document.getElementById('after');
+    const divider = document.getElementById('divider');
+    const handle = document.getElementById('handle');
+    let dragging = false;
+
+    function setPos(x) {
+      const r = wrap.getBoundingClientRect();
+      const p = Math.max(4, Math.min(96, ((x - r.left) / r.width) * 100));
+      after.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+      divider.style.left = p + '%';
+      handle.style.left = p + '%';
+    }
+
+    wrap.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
+    window.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    wrap.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchend', () => { dragging = false; });
+  </script>
+
 </body>
 </html>
