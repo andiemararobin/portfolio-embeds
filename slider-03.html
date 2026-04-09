@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facilitating Equitable Experiential Learning at Scale — Andrea Robin</title>
+  <title>Case Study AR03 — Before &amp; After</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -25,7 +25,7 @@
     .wrap {
       position: relative;
       width: 100%;
-      aspect-ratio: 680 / 700;
+      aspect-ratio: 640 / 420;
       overflow: hidden;
       cursor: col-resize;
       user-select: none;
@@ -63,7 +63,7 @@
       text-align: center;
       font-size: 11px;
       color: #3d5159;
-      padding-top: 5px;
+      padding-top: 4px;
       opacity: 0.6;
     }
     svg text {
@@ -79,128 +79,63 @@
   <div class="wrap" id="wrap">
 
     <!-- BEFORE panel -->
-    <svg class="panel" viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img">
-      <title>Before: three outcome areas — people, institution, systemic reach — disconnected and unsupported</title>
-      <desc>Three outcome rows sit disconnected and unsupported. People doing the work have no shared processes. The institution has no shared equity infrastructure. Systemic reach across campus employers is inconsistent, with no equity standards.</desc>
+    <svg class="panel" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Before: three isolated rings with no shared infrastructure</title>
+      <desc>Three concentric dashed rings sit disconnected. The outer ring: 900+ campus employers, inconsistent onboarding. The middle ring: public-facing learning institution, no shared processes. The inner ring: 15+ student staff, unsupported.</desc>
 
-      <rect width="680" height="700" fill="#eef1f2"/>
+      <rect width="640" height="420" fill="#eef1f2"/>
 
-      <!-- Title -->
-      <text x="340" y="30" text-anchor="middle" font-size="13" font-weight="500">Facilitating equitable experiential learning at scale</text>
-      <text x="340" y="48" text-anchor="middle" font-size="11" opacity="0.6">Large research-intensive university · Two years · Two progressive roles</text>
+      <!-- Outer ring -->
+      <circle cx="320" cy="215" r="185" fill="none" stroke="#3d5159" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.35"/>
+      <!-- Middle ring -->
+      <circle cx="320" cy="215" r="120" fill="none" stroke="#3d5159" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.5"/>
+      <!-- Inner ring -->
+      <circle cx="320" cy="215" r="58" fill="#fff" fill-opacity="0.5" stroke="#3d5159" stroke-width="0.75" stroke-dasharray="3 3"/>
 
-      <text x="340" y="74" text-anchor="middle" font-size="11" letter-spacing="1" opacity="0.5">NO SHARED INFRASTRUCTURE</text>
+      <!-- Inner label -->
+      <text x="320" y="209" text-anchor="middle" font-size="11" opacity="0.55">15+ student</text>
+      <text x="320" y="224" text-anchor="middle" font-size="11" opacity="0.55">staff</text>
 
-      <!-- Outcome 1: people -->
-      <text x="340" y="100" text-anchor="middle" font-size="11" opacity="0.4">people doing the work</text>
-      <line x1="44" y1="106" x2="636" y2="106" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="112" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="133" text-anchor="middle" font-size="12" opacity="0.45">15+ student staff in university-wide fieldwork</text>
-      <text x="340" y="150" text-anchor="middle" font-size="11" opacity="0.45">no shared processes · isolated front-line roles · no wellness support</text>
+      <!-- Middle ring label -->
+      <text x="320" y="108" text-anchor="middle" font-size="11" opacity="0.5">public-facing learning institution</text>
+      <text x="320" y="122" text-anchor="middle" font-size="11" opacity="0.4">no shared processes</text>
 
-      <!-- Outcome 2: institution -->
-      <text x="340" y="186" text-anchor="middle" font-size="11" opacity="0.4">the institution</text>
-      <line x1="44" y1="192" x2="636" y2="192" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="198" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="219" text-anchor="middle" font-size="12" opacity="0.45">Public-facing learning institution</text>
-      <text x="340" y="236" text-anchor="middle" font-size="11" opacity="0.45">no shared equity infrastructure · complex needs unaddressed</text>
+      <!-- Outer ring label -->
+      <text x="320" y="22" text-anchor="middle" font-size="11" opacity="0.4">900+ campus employers</text>
+      <text x="320" y="36" text-anchor="middle" font-size="11" opacity="0.35">inconsistent onboarding</text>
 
-      <!-- Outcome 3: systemic reach -->
-      <text x="340" y="272" text-anchor="middle" font-size="11" opacity="0.4">systemic reach</text>
-      <line x1="44" y1="278" x2="636" y2="278" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="284" width="452" height="52" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="305" text-anchor="middle" font-size="12" opacity="0.45">900+ campus employers · 3,000+ students</text>
-      <text x="340" y="322" text-anchor="middle" font-size="11" opacity="0.45">inconsistent onboarding · no equity standards · placement ≠ support</text>
-
-      <text x="340" y="354" text-anchor="middle" font-size="11" opacity="0.4">equity aspirational · access inconsistent · students unsupported</text>
-
-      <line x1="40" y1="370" x2="640" y2="370" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-
-      <!-- Shift section -->
-      <text x="340" y="394" text-anchor="middle" font-size="13" font-weight="500">What the shift looked like</text>
-
-      <rect x="44" y="408" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="425" text-anchor="middle" font-size="12" opacity="0.45">Good intentions</text>
-      <text x="340" y="441" text-anchor="middle" font-size="11" opacity="0.45">Individual supervisor goodwill · variable practice across departments</text>
-
-      <rect x="44" y="462" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="479" text-anchor="middle" font-size="12" opacity="0.45">Technical eligibility</text>
-      <text x="340" y="495" text-anchor="middle" font-size="11" opacity="0.45">Students placed but not consistently supported or retained</text>
-
-      <rect x="44" y="516" width="592" height="44" rx="6" fill="#fff" fill-opacity="0.4" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="533" text-anchor="middle" font-size="12" opacity="0.45">Isolated front-line roles</text>
-      <text x="340" y="549" text-anchor="middle" font-size="11" opacity="0.45">Staff unprepared for complexity they encountered daily</text>
-
-      <line x1="40" y1="574" x2="640" y2="574" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-
-      <!-- Core insight -->
-      <rect x="80" y="590" width="520" height="52" rx="6" fill="#fff" fill-opacity="0.5" stroke="#3d5159" stroke-width="0.5" stroke-dasharray="4 3"/>
-      <text x="340" y="611" text-anchor="middle" font-size="12" font-weight="500" opacity="0.45">Equity at scale requires systems, not just goodwill</text>
-      <text x="340" y="628" text-anchor="middle" font-size="11" opacity="0.45">People delivering equitable learning also need infrastructure and support</text>
+      <!-- Caption -->
+      <text x="320" y="398" text-anchor="middle" font-size="11" opacity="0.45">equity aspirational · access inconsistent · students unsupported</text>
     </svg>
 
     <!-- AFTER panel -->
-    <svg class="panel after-panel" id="after" viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img">
-      <title>After: three outcome areas transformed — people supported, institution equity-aware, systemic reach at scale</title>
-      <desc>Three outcome rows now filled and connected. People doing the work have a wellness liaison and shared public service processes. The institution has social safety net awareness and an equity and inclusion pilot. Systemic reach covers 900+ employers and 3,000+ students with accessible onboarding, equity evaluation, and $6M+ in grant oversight.</desc>
+    <svg class="panel after-panel" id="after" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>After: three connected rings with equity built into the architecture</title>
+      <desc>Three concentric solid rings now filled and connected. The outer ring: 900+ employers, 3,000+ students, accessible onboarding, equity evaluation, $6M+ grant oversight, workplace environments assessed for meaningful HPSM inclusion. The middle ring: public-facing learning institution, social safety net awareness, equity and inclusion pilot. The inner ring: 15+ student staff, wellness liaison, shared processes.</desc>
 
-      <rect width="680" height="700" fill="#fff"/>
+      <rect width="640" height="420" fill="#fff"/>
 
-      <!-- Title -->
-      <text x="340" y="30" text-anchor="middle" font-size="13" font-weight="500">Facilitating equitable experiential learning at scale</text>
-      <text x="340" y="48" text-anchor="middle" font-size="11" opacity="0.6">Large research-intensive university · Two years · Two progressive roles</text>
+      <!-- Outer ring -->
+      <circle cx="320" cy="215" r="185" fill="#eef1f2" stroke="#3d5159" stroke-width="0.75"/>
+      <!-- Middle ring -->
+      <circle cx="320" cy="215" r="120" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.75"/>
+      <!-- Inner ring -->
+      <circle cx="320" cy="215" r="58" fill="#fff" stroke="#5c7e8f" stroke-width="0.75"/>
 
-      <text x="340" y="74" text-anchor="middle" font-size="11" letter-spacing="1" opacity="0.6">EQUITY BUILT INTO THE ARCHITECTURE</text>
+      <!-- Inner label -->
+      <text x="320" y="206" text-anchor="middle" font-size="11">15+ student staff</text>
+      <text x="320" y="221" text-anchor="middle" font-size="11">wellness liaison</text>
 
-      <!-- Outcome 1: people -->
-      <text x="340" y="100" text-anchor="middle" font-size="11" opacity="0.5">people doing the work</text>
-      <line x1="44" y1="106" x2="636" y2="106" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="112" width="452" height="52" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="130" text-anchor="middle" font-size="12" font-weight="500">Wellness liaison partnership</text>
-      <text x="340" y="146" text-anchor="middle" font-size="11">Timely referral to health resources · shared public service processes</text>
-      <text x="340" y="159" text-anchor="middle" font-size="11">Staff equipped to respond to community complexity with care</text>
+      <!-- Middle ring label -->
+      <text x="320" y="108" text-anchor="middle" font-size="11">public-facing learning institution</text>
+      <text x="320" y="122" text-anchor="middle" font-size="11" opacity="0.7">social safety net awareness · equity pilot</text>
 
-      <!-- Outcome 2: institution -->
-      <text x="340" y="186" text-anchor="middle" font-size="11" opacity="0.5">the institution</text>
-      <line x1="44" y1="192" x2="636" y2="192" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="198" width="452" height="52" rx="6" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="216" text-anchor="middle" font-size="12" font-weight="500">Social safety net awareness · equity &amp; inclusion pilot</text>
-      <text x="340" y="232" text-anchor="middle" font-size="11">Administration and student leaders equipped for equity practice</text>
-      <text x="340" y="245" text-anchor="middle" font-size="11">Inclusion of sexual and gender diversity built into student leadership</text>
+      <!-- Outer ring label -->
+      <text x="320" y="22" text-anchor="middle" font-size="11">900+ employers · 3,000+ students</text>
+      <text x="320" y="36" text-anchor="middle" font-size="11" opacity="0.7">accessible onboarding · equity evaluation · $6M+ grants</text>
 
-      <!-- Outcome 3: systemic reach -->
-      <text x="340" y="272" text-anchor="middle" font-size="11" opacity="0.5">systemic reach</text>
-      <line x1="44" y1="278" x2="636" y2="278" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-      <rect x="114" y="284" width="452" height="52" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="302" text-anchor="middle" font-size="12" font-weight="500">Accessible onboarding · equity evaluation · $6M+ grant oversight</text>
-      <text x="340" y="318" text-anchor="middle" font-size="11">900+ employers · 3,000+ students · HPSM inclusion assessed</text>
-      <text x="340" y="331" text-anchor="middle" font-size="11">Revised job postings reducing structural barriers at point of design</text>
-
-      <text x="340" y="354" text-anchor="middle" font-size="11" opacity="0.6">equity structural · access consistent · students supported</text>
-
-      <line x1="40" y1="370" x2="640" y2="370" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-
-      <!-- Shift section -->
-      <text x="340" y="394" text-anchor="middle" font-size="13" font-weight="500">What the shift looked like</text>
-
-      <rect x="44" y="408" width="592" height="44" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="425" text-anchor="middle" font-size="12" font-weight="500">Shared infrastructure</text>
-      <text x="340" y="441" text-anchor="middle" font-size="11">Equity built into onboarding, process design, and evaluation</text>
-
-      <rect x="44" y="462" width="592" height="44" rx="6" fill="#dde6ea" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="479" text-anchor="middle" font-size="12" font-weight="500">Meaningful inclusion</text>
-      <text x="340" y="495" text-anchor="middle" font-size="11">HPSM students placed, retained, and systematically assessed</text>
-
-      <rect x="44" y="516" width="592" height="44" rx="6" fill="#eef1f2" stroke="#5c7e8f" stroke-width="0.5"/>
-      <text x="340" y="533" text-anchor="middle" font-size="12" font-weight="500">Supported practitioners</text>
-      <text x="340" y="549" text-anchor="middle" font-size="11">Wellness, awareness, and appropriate boundaries built in</text>
-
-      <line x1="40" y1="574" x2="640" y2="574" stroke="#3d5159" stroke-width="0.5" opacity="0.15"/>
-
-      <!-- Core insight -->
-      <rect x="80" y="590" width="520" height="52" rx="6" fill="#eef1f2" stroke="#3d5159" stroke-width="0.5"/>
-      <text x="340" y="611" text-anchor="middle" font-size="12" font-weight="500">Equity at scale requires systems, not just goodwill</text>
-      <text x="340" y="628" text-anchor="middle" font-size="11">People delivering equitable learning also need infrastructure and support</text>
+      <!-- Caption -->
+      <text x="320" y="398" text-anchor="middle" font-size="11" opacity="0.7">equity structural · access consistent · students supported</text>
     </svg>
 
     <div class="divider-line" id="divider"></div>
